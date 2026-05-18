@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.kaanthan24/agnigateway-mcp",
+  "title": "AgniGateway Marketplace",
+  "description": "MCP travel marketplace — 560+ enriched travel products across 40+ cities. Tools: search_travel, get_product_detail, check_availability, get_policies, initiate_checkout. Public endpoint, no auth required.",
+  "version": "1.0.0",
+  "websiteUrl": "https://agnigateway.com",
+  "repository": {
+    "url": "https://github.com/Kaanthan24/agnigateway-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.agnigateway.com/mcp/v1/public/mcp"
+    }
+  ]
+}

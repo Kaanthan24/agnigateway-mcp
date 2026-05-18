@@ -51,10 +51,10 @@ All endpoints are public. No Bearer token required. Authenticated partner endpoi
 | Tool | Description |
 |---|---|
 | `search_travel` | Natural language search across 560+ products. Returns `agent_summary`, `semantic_tags`, `ai_readiness_score`, `affiliate_url`. |
-| `get_offer_detail` | Full enriched details for a product by `source_id`. |
+| `get_product_detail` | Full enriched details for a product by `source_id`. |
 | `check_availability` | Current availability and price. |
-| `get_bundle` | Compose a hotel + addon bundle with `bundle_value_score`. |
-| `initiate_booking` | Generate a tracked affiliate booking URL. Direct link to partner (Aviasales, Klook, Searadar) via Travelpayouts. |
+| `get_policies` | Booking policies and conditions for a product. |
+| `initiate_checkout` | Generate a tracked affiliate booking URL. Direct link to partner (Aviasales, Klook, Searadar) via Travelpayouts. |
 
 ---
 
