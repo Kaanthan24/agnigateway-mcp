@@ -3,7 +3,7 @@
   "name": "io.github.Kaanthan24/agnigateway-mcp",
   "title": "AgniGateway Marketplace",
   "description": "AI marketplace — flights, tours, activities, transport & more via MCP. No auth required.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://agnigateway.com",
   "repository": {
     "url": "https://github.com/Kaanthan24/agnigateway-mcp",
