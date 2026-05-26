@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.kaanthan24/agnigateway-mcp",
+  "name": "io.github.Kaanthan24/agnigateway-mcp",
   "title": "AgniGateway Marketplace",
   "description": "AI travel marketplace — flights, tours, yacht charters via MCP. No auth required.",
   "version": "1.0.0",
