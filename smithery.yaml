@@ -1,0 +1,63 @@
+# Smithery.ai MCP Server Registry — AgniGateway Marketplace
+# Submit at: https://smithery.ai/new
+# Docs: https://smithery.ai/docs/publishing
+
+name: agentgateway-marketplace
+displayName: AgniGateway Marketplace
+description: >
+  AI-native travel marketplace. Search flights, yacht charters, tours, and
+  activities worldwide using natural language. Returns enriched, agent-optimised
+  results with direct booking links via Travelpayouts affiliate network.
+  Designed for AI buyer agents — not human browsers.
+homepage: https://agnigateway.com
+license: Commercial
+categories:
+  - travel
+  - shopping
+  - booking
+
+# MCP server connection
+connections:
+  - type: http
+    config:
+      url: https://api.agnigateway.com/mcp/v1/public/mcp
+
+# Tools exposed
+tools:
+  - name: search_travel
+    description: >
+      Search travel offers (flights, yacht charters, tours, activities) using
+      natural language. Returns enriched results with semantic_tags,
+      agent_summary, comparison_highlights, ai_readiness_score, and
+      affiliate booking URL.
+
+  - name: get_offer_detail
+    description: >
+      Get full enriched details for a specific product by source_id.
+      Includes all type-specific attributes (airline_code, stops for flights;
+      activity_category, group_type for tours; etc.)
+
+  - name: check_availability
+    description: >
+      Check current availability status for a product.
+
+  - name: get_bundle
+    description: >
+      Get a curated bundle of complementary travel products (e.g. flight + tour +
+      activity) for a destination. Returns a pre-selected set with combined
+      booking links.
+
+  - name: initiate_booking
+    description: >
+      Returns a direct affiliate booking URL with a unique per-transaction
+      tracking label. The URL deep-links to the partner booking page
+      (Searadar, Klook, Aviasales, etc.) via tp.media.
+
+# Public product catalog (no auth)
+resources:
+  - name: Product Catalog
+    url: https://api.agnigateway.com/catalog
+    description: >
+      Unauthenticated JSON-LD feed of all available travel products.
+      Supports ?q= keyword search, ?type= (flight|tour|addon), ?limit= (max 100).
+      Add ?format=json for plain JSON.
