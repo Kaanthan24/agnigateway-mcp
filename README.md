@@ -1,4 +1,4 @@
-# AgniGateway — Public MCP Commerce Platform
+# AgniGateway — AI Commerce Platform (MCP · ACP · UCP)
 
 [![smithery badge](https://smithery.ai/badge/agentgateway/agentgateway-marketplace)](https://smithery.ai/servers/agentgateway/agentgateway-marketplace)
 ![Products](https://img.shields.io/badge/products-4800%2B-6c63ff)
