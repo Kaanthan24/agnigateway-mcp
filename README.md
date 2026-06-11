@@ -1,12 +1,15 @@
 # AgniGateway — Public MCP Travel Marketplace
 
 [![smithery badge](https://smithery.ai/badge/agentgateway/agentgateway-marketplace)](https://smithery.ai/servers/agentgateway/agentgateway-marketplace)
-![Products](https://img.shields.io/badge/products-560%2B-6c63ff)
+![Products](https://img.shields.io/badge/products-4800%2B-6c63ff)
 ![Protocols](https://img.shields.io/badge/protocols-MCP%20%7C%20ACP%20%7C%20UCP-00e5a0)
 ![Auth](https://img.shields.io/badge/auth-none%20required-brightgreen)
 ![Cities](https://img.shields.io/badge/cities-40%2B-blue)
 
-**AgniGateway** is an AI-native travel marketplace exposing 560+ enriched travel products — flights, yacht charters, tours, and activities — through MCP, ACP, and UCP protocols. Built for AI buyer agents. No human browsing required.
+**AgniGateway** is an AI-native commerce platform exposing 4,800+ enriched products through MCP, ACP, and UCP protocols. Built for AI buyer agents. No human browsing required.
+
+- **M2M Marketplace** — 2,867 travel products: flights, yacht charters, tours, activities across 40+ cities
+- **SaaS (WooCommerce)** — 1,954 retail products from connected merchant stores, queryable by AI agents
 
 > **Public endpoint. No API key. No signup. Just connect and search.**
 
@@ -38,9 +41,9 @@ curl -X POST https://api.agnigateway.com/mcp/v1/public/mcp \
 | Protocol | URL | Auth |
 |---|---|---|
 | **MCP** (JSON-RPC 2.0) | `https://api.agnigateway.com/mcp/v1/public/mcp` | None |
-| **ACP** (OpenAI-compatible) | `https://wjeqwognvxhpjdldtiva.supabase.co/functions/v1/acp-server/public/tools/invoke` | None |
-| **UCP** (Google UCP) | `https://wjeqwognvxhpjdldtiva.supabase.co/functions/v1/ucp-server/marketplace/v1/public` | None |
-| **Public Catalog** (JSON-LD) | `https://wjeqwognvxhpjdldtiva.supabase.co/functions/v1/public-catalog` | None |
+| **ACP** (OpenAI-compatible) | `https://api.agnigateway.com/acp/public/tools/invoke` | None |
+| **UCP** (Google UCP) | `https://api.agnigateway.com/ucp/marketplace/v1/public` | None |
+| **Public Catalog** (JSON-LD) | `https://api.agnigateway.com/catalog` | None |
 
 All endpoints are public. No Bearer token required. Authenticated partner endpoints available at [agnigateway.com](https://agnigateway.com).
 
@@ -50,17 +53,19 @@ All endpoints are public. No Bearer token required. Authenticated partner endpoi
 
 | Tool | Description |
 |---|---|
-| `search_travel` | Natural language search across 560+ products. Returns `agent_summary`, `semantic_tags`, `ai_readiness_score`, `affiliate_url`. |
-| `get_product_detail` | Full enriched details for a product by `source_id`. |
+| `search_travel` | Natural language search across 4,800+ products (travel + retail). Returns `agent_summary`, `semantic_tags`, `ai_readiness_score`, `affiliate_url`. |
+| `get_offer_detail` | Full enriched details for a product by `source_id`. |
 | `check_availability` | Current availability and price. |
-| `get_policies` | Booking policies and conditions for a product. |
-| `initiate_checkout` | Generate a tracked affiliate booking URL. Direct link to partner (Aviasales, Klook, Searadar) via Travelpayouts. |
+| `get_bundle` | Compose a hotel + addon bundle with `bundle_value_score`. |
+| `initiate_booking` | Generate a tracked affiliate booking URL. Direct link to partner (Aviasales, Klook, Searadar) via Travelpayouts. |
 
 ---
 
 ## What's in the Catalog
 
-**560+ products enriched with Claude Haiku across 40+ cities:**
+**4,800+ products enriched with Claude Haiku — 100% enrichment rate across both tracks:**
+
+### M2M Marketplace — 2,867 travel products across 40+ cities
 
 | Type | Sources | Coverage |
 |---|---|---|
@@ -68,6 +73,15 @@ All endpoints are public. No Bearer token required. Authenticated partner endpoi
 | 🛥️ Yacht Charters | Searadar | Greece, Mediterranean |
 | 🎯 Tours & Activities | Klook, Ticketnetwork, WegoTrip | 40 cities |
 | 🚗 Transport Add-ons | BikesBooking, LocalRent | 40 cities |
+
+### SaaS (WooCommerce) — 1,954 retail products
+
+| Type | Sources | Coverage |
+|---|---|---|
+| 🐾 Pet supplies | petshop24 (Awin) | DE |
+| 🏭 Industrial / consumer goods | Matten Welt (Awin) | DE |
+
+Merchant catalog sync via WooCommerce connector. More merchants and categories onboarding continuously.
 
 **Cities:** Istanbul, Dubai, Paris, London, Bangkok, Singapore, New York, Tokyo, Barcelona, Amsterdam, Rome, Vienna, Prague, Budapest, Berlin, Lisbon, Athens, Cairo, Cape Town, Mumbai, Bali, Sydney, Seoul, Hong Kong, Miami, Los Angeles, Toronto, Mexico City, Rio de Janeiro, Buenos Aires, Zurich, Brussels, Copenhagen, Stockholm, Dublin, Warsaw, Kuala Lumpur, Jakarta, Manila, Nairobi + more.
 
@@ -150,7 +164,8 @@ api.agnigateway.com  (Deno Deploy — Europe/AMS)
     ▼
 Supabase Edge Functions  (eu-central-1)
     │
-    ├── marketplace_products  (560+ enriched products)
+    ├── marketplace_products  (2,867 enriched travel products)
+    ├── products  (1,954 enriched WooCommerce retail products)
     ├── marketplace_transactions  (per-booking tracking)
     └── pgvector semantic search
     │
@@ -167,8 +182,8 @@ AgniGateway has two tracks:
 
 | Track | Description |
 |---|---|
-| **M2M Marketplace** | This repo — travel & affiliate products for AI agents |
-| **SaaS (WooCommerce)** | Make any WooCommerce store queryable by AI buyer agents |
+| **M2M Marketplace** | This repo — 2,867 travel & affiliate products for AI agents |
+| **SaaS (WooCommerce)** | 1,954 WooCommerce products queryable by AI buyer agents |
 
 More tracks coming. Visit [agnigateway.com](https://agnigateway.com) for the full platform.
 
