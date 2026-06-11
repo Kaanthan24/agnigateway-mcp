@@ -9,7 +9,7 @@
 **AgniGateway** is an AI-native commerce platform exposing 4,800+ enriched products through MCP, ACP, and UCP protocols. Built for AI buyer agents. No human browsing required.
 
 - **M2M Marketplace** — 2,867 travel products: flights, yacht charters, tours, activities across 40+ cities
-- **SaaS (WooCommerce)** — 1,954 retail products from connected merchant stores, queryable by AI agents
+- **SaaS Commerce** — 1,954 retail products from connected merchant stores, queryable by AI agents
 
 > **Public endpoint. No API key. No signup. Just connect and search.**
 
@@ -74,14 +74,14 @@ All endpoints are public. No Bearer token required. Authenticated partner endpoi
 | 🎯 Tours & Activities | Klook, Ticketnetwork, WegoTrip | 40 cities |
 | 🚗 Transport Add-ons | BikesBooking, LocalRent | 40 cities |
 
-### SaaS (WooCommerce) — 1,954 retail products
+### SaaS Commerce — 1,954 retail products
 
 | Type | Sources | Coverage |
 |---|---|---|
 | 🐾 Pet supplies | petshop24 (Awin) | DE |
 | 🏭 Industrial / consumer goods | Matten Welt (Awin) | DE |
 
-Merchant catalog sync via WooCommerce connector. More merchants and categories onboarding continuously.
+Merchant catalog sync via SaaS connector. More merchants and categories onboarding continuously.
 
 **Cities:** Istanbul, Dubai, Paris, London, Bangkok, Singapore, New York, Tokyo, Barcelona, Amsterdam, Rome, Vienna, Prague, Budapest, Berlin, Lisbon, Athens, Cairo, Cape Town, Mumbai, Bali, Sydney, Seoul, Hong Kong, Miami, Los Angeles, Toronto, Mexico City, Rio de Janeiro, Buenos Aires, Zurich, Brussels, Copenhagen, Stockholm, Dublin, Warsaw, Kuala Lumpur, Jakarta, Manila, Nairobi + more.
 
@@ -147,7 +147,7 @@ Add to your `claude_desktop_config.json`:
 | `llms.txt` | [agnigateway.com/llms.txt](https://agnigateway.com/llms.txt) |
 | `mcp.json` | [agnigateway.com/.well-known/mcp.json](https://agnigateway.com/.well-known/mcp.json) |
 | `ai-plugin.json` | [agnigateway.com/.well-known/ai-plugin.json](https://agnigateway.com/.well-known/ai-plugin.json) |
-| Public Catalog | [public-catalog](https://wjeqwognvxhpjdldtiva.supabase.co/functions/v1/public-catalog) |
+| Public Catalog | [api.agnigateway.com/catalog](https://api.agnigateway.com/catalog) |
 
 ---
 
@@ -165,7 +165,7 @@ api.agnigateway.com  (Deno Deploy — Europe/AMS)
 Supabase Edge Functions  (eu-central-1)
     │
     ├── marketplace_products  (2,867 enriched travel products)
-    ├── products  (1,954 enriched WooCommerce retail products)
+    ├── products  (1,954 enriched SaaS retail products)
     ├── marketplace_transactions  (per-booking tracking)
     └── pgvector semantic search
     │
@@ -183,7 +183,7 @@ AgniGateway has two tracks:
 | Track | Description |
 |---|---|
 | **M2M Marketplace** | This repo — 2,867 travel & affiliate products for AI agents |
-| **SaaS (WooCommerce)** | 1,954 WooCommerce products queryable by AI buyer agents |
+| **SaaS Commerce** | 1,954 retail products from connected merchant stores, queryable by AI buyer agents |
 
 More tracks coming. Visit [agnigateway.com](https://agnigateway.com) for the full platform.
 
