@@ -1,6 +1,6 @@
 # AgniGateway — AI Commerce Platform (MCP · ACP · UCP)
 
-[![smithery badge](https://smithery.ai/badge/agentgateway/agentgateway-marketplace)](https://smithery.ai/servers/agentgateway/agentgateway-marketplace)
+[![LightNow](https://lightnow.ai/badge/io.github.Kaanthan24/agnigateway-mcp)](https://lightnow.ai/servers/io.github.Kaanthan24/agnigateway-mcp)
 ![Products](https://img.shields.io/badge/products-4800%2B-6c63ff)
 ![Protocols](https://img.shields.io/badge/protocols-MCP%20%7C%20ACP%20%7C%20UCP-00e5a0)
 ![Auth](https://img.shields.io/badge/auth-none%20required-brightgreen)
